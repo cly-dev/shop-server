@@ -1,0 +1,218 @@
+[2023-02-12T20:38:20.842] [ERROR] cheese - Error: redis写入失败
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:18:13)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:38:39.220] [ERROR] cheese - TypeError: redis.setCode is not a function
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:19:16)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:38:40.024] [ERROR] cheese - TypeError: redis.setCode is not a function
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:19:16)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:38:42.115] [ERROR] cheese - TypeError: redis.setCode is not a function
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:19:16)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:39:02.957] [ERROR] cheese - TypeError: redis.setCode is not a function
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:19:16)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:39:03.499] [ERROR] cheese - TypeError: redis.setCode is not a function
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:19:16)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:39:05.383] [ERROR] cheese - TypeError: redis.setCode is not a function
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:19:16)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:39:41.741] [ERROR] cheese - Error: redis写入失败
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:24:15)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-12T20:39:42.236] [ERROR] cheese - Error: redis写入失败
+    at exports.getImgCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:24:15)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:47:12)
+[2023-02-13T17:15:43.191] [ERROR] cheese - Error: 参数错误，请检查参数或参数类型
+    at module.exports (/Users/ly/Desktop/毕设/shop-server/untils/catch.js:12:12)
+    at exports.getEmailCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:43:14)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+[2023-02-13T17:16:03.495] [ERROR] cheese - Error: 参数错误，请检查参数或参数类型
+    at module.exports (/Users/ly/Desktop/毕设/shop-server/untils/catch.js:12:12)
+    at exports.getEmailCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:43:14)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+[2023-02-13T17:16:30.366] [ERROR] cheese - Error: 参数错误，请检查参数或参数类型
+    at module.exports (/Users/ly/Desktop/毕设/shop-server/untils/catch.js:12:12)
+    at exports.getEmailCode (/Users/ly/Desktop/毕设/shop-server/control/public.js:43:14)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/ly/Desktop/毕设/shop-server/node_modules/express/lib/router/index.js:175:3)
+[2023-02-13T17:17:16.541] [ERROR] cheese - Promise { <rejected> '111' }
+[2023-02-13T17:18:08.659] [ERROR] cheese - Promise { <rejected> '111' }
+[2023-02-13T17:23:41.955] [ERROR] cheese - Promise { <rejected> '111' }
+[2023-02-13T17:24:20.796] [ERROR] cheese - Promise { <rejected> '111' }
+[2023-02-13T17:24:52.523] [ERROR] cheese - Promise { <rejected> '111' }
+[2023-02-13T21:27:28.497] [ERROR] cheese - Error: Invalid login: 535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+    at SMTPConnection._formatError (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:1548:34)
+    at SMTPConnection.<anonymous> (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:546:26)
+    at SMTPConnection._processResponse (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:953:20)
+    at SMTPConnection._onData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-13T21:29:15.224] [ERROR] cheese - Error: Invalid login: 535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+    at SMTPConnection._formatError (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:1548:34)
+    at SMTPConnection.<anonymous> (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:546:26)
+    at SMTPConnection._processResponse (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:953:20)
+    at SMTPConnection._onData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-13T21:29:21.349] [ERROR] cheese - Error: Invalid login: 535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+    at SMTPConnection._formatError (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:1548:34)
+    at SMTPConnection.<anonymous> (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:546:26)
+    at SMTPConnection._processResponse (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:953:20)
+    at SMTPConnection._onData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-13T21:30:02.081] [ERROR] cheese - Error: Invalid login: 535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+    at SMTPConnection._formatError (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:1548:34)
+    at SMTPConnection.<anonymous> (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:546:26)
+    at SMTPConnection._processResponse (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:953:20)
+    at SMTPConnection._onData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-13T21:30:20.124] [ERROR] cheese - Error: Invalid login: 535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256
+    at SMTPConnection._formatError (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:790:19)
+    at SMTPConnection._actionAUTHComplete (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:1548:34)
+    at SMTPConnection.<anonymous> (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:546:26)
+    at SMTPConnection._processResponse (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:953:20)
+    at SMTPConnection._onData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:755:14)
+    at TLSSocket.SMTPConnection._onSocketData (/Users/ly/Desktop/毕设/shop-server/node_modules/nodemailer/lib/smtp-connection/index.js:193:44)
+    at TLSSocket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at TLSSocket.Readable.push (node:internal/streams/readable:228:10) {
+  code: 'EAUTH',
+  response: '535 Login Fail. Please enter your authorization code to login. More information in http://service.mail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001256',
+  responseCode: 535,
+  command: 'AUTH PLAIN'
+}
+[2023-02-20T21:29:43.150] [ERROR] cheese - 验证码错误

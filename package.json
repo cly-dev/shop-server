@@ -1,0 +1,30 @@
+{
+  "name": "shop-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.4",
+    "express": "^4.18.1",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "log4js": "^6.7.0",
+    "mongodb": "^5.1.0",
+    "mongoose": "^6.9.1",
+    "multiparty": "^4.2.3",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "redis": "^3.1.2",
+    "request": "^2.88.2",
+    "socket.io": "^4.6.0",
+    "sodo": "^0.0.1",
+    "svg-captcha": "^1.4.0"
+  }
+}
