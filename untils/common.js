@@ -3,6 +3,8 @@
  * @Date: 2023-02-13 17:58:06
  * @Description: 通用方法
  */
+const fs=require("fs");
+const path=require("path")
 //发送错误
 const ErrorMap=require('../constant/tips')
 
@@ -42,6 +44,7 @@ exports.getParams=(obj)=>{
     }
     return parmas;
   }
+  //深拷贝
 exports.deepClone=(obj)=>{
     //获取对象所有的可枚举和不可枚举的键值
     const list=Reflect.ownKeys(obj);
@@ -84,4 +87,46 @@ exports.deepClone=(obj)=>{
         }
     })
     return result;
+}
+//获取特点注释方法
+exports.moduleSerive=(type,name)=>{
+let fileContent='';
+let list=[];
+try{
+    fileContent=fs.readFileSync(path.join(__dirname,'../control',type,`${name}.js`)).toString()
+    const interfaceName=fileContent.match(/@(GET|POST|PUT|DELETE):[\w]+(\/:\w+)?/gi);
+    if(interfaceName){
+     list= interfaceName.map((v)=>{
+           const params={
+                type:'',
+                path:'',
+                method:''
+            }
+            if(/\/:\w/.test(v)){
+                const [tp,...ph]=v.replace("@",'').split(":");
+                params.path=ph.reduce((pre,doc,index)=>{
+                    console.log(doc)
+                    if(index===ph.length - 1){
+                        return `${pre}:${doc}`;
+                    }              
+                    return pre + doc;      
+                });
+                params.type=tp;
+                const [path,] =ph.splice('/');
+                params.method=path.slice(0,-1)
+                
+            }else{
+            const [type,name]= v.replace('@','').split(':');
+                params.method=name,
+                params.path=name,
+                params.type=type
+            }
+            return params;
+        })
+    }
+    }catch(err){
+        console.log(err)
+    }
+
+return list;
 }

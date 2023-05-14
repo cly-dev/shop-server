@@ -12,6 +12,7 @@ module.exports={
     //创建
     create: async(data)=>{
         const {seoUrl,seoTitle,seoDesc}=data;
+        console.log(data)
         await seoDao.create({seoUrl,seoTitle,seoDesc})
         const product=new productDao(data);
         return  product.save();
@@ -46,25 +47,25 @@ module.exports={
     //获取列表
     list:async (page,size,params)=>{
         const data=getParams(params);
-        const filters=[];
+        const filters={};
         for(let key in data){
-            filters.push({
-                [key]:new RegExp(data[key])
-            })
+            if(key==='productTitle'){
+                Object.assign(filters,{[key]:new RegExp(data[key])})
+            }
+                Object.assign(filters,{[key]:data[key]})
         }
         return {
-            list:await productDao.find({$or:filters}).sort({createTime:'desc'}).skip((page - 1) * size).limit(size),
-            total:await productDao.countDocuments({$or:filters})
+            list:await productDao.find(filters).sort({createTime:'desc'}).skip((page - 1) * size).limit(size),
+            total:await productDao.countDocuments(filters)
         }
     },
     //修改
     update:(_id,data)=>{
-        const params=getParams(data);
-        return productDao.updateOne({_id},{$set:params});
+        return productDao.updateOne({_id},{$set:data});
     },
     //修改上架状态
-    status:function(_id,status){
-       return this.update({_id},{status})
+    status:async function(_id,status){
+       return  this.update({_id},{status})
     },
     //删除商品
     delete:(_id)=>{
@@ -73,5 +74,6 @@ module.exports={
     //通过seoUrl查看商品详情
     getInfoBySeoUrl:(seoUrl)=>{
       return productDao.findOne({seoUrl});
-    }
-}
+    },
+    
+}   

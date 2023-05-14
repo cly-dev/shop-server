@@ -3,14 +3,25 @@
  * @Date: 2023-02-10 21:25:08
  * @Description: 类目字段
  */
-const {Schema}=require("mongoose")
+const { ObjectId } = require("mongodb");
+const mongoose=require("mongoose");
+const parentId=new ObjectId(0)
 module.exports = {
     name: "category",
     collection: {
       //seoId
       seoUrl:{
         type:String,
-        required:true
+        required:true,
+        unique:true,
+      },
+      seoTitle:{
+        type:String,
+        default:''
+      },
+      seoDesc:{
+        type:String,
+        default:'',
       },
       //类目名
      categoryTitle: {
@@ -51,11 +62,15 @@ module.exports = {
       },
       //父级Id，0-一级
      parentId:{
-        type:String,
-        default:'0'
+        type: mongoose.Schema.Types.ObjectId,
+        default:parentId
      },
      //创建时间
     creatTime:{
+      type:Number,
+      default:Date.now()
+    },
+    sortValue:{
       type:Number,
       default:Date.now()
     },

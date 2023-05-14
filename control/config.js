@@ -10,24 +10,28 @@ module.exports={
     //新增
     create:async(req,res)=>{
         try{
-            const {location,configTitle}=req.body;
+            const {location,configTitle,itemId,imageUrl,content}=req.body;
             if(location && locationType.includes(location) && configTitle ){
-                message("Success",res,await configDao.create({location,configTitle}))
+                message("Success",res,await configDao.create({location,configTitle,itemId,imageUrl,content}))
             }else{
                 message("PError",res)
             }
         }catch(err){
+            console.log(err)
+                message("SError",res)
 
         }
     },
     //状态
     status:async(req,res)=>{
         try{
+            console.log('=------------------------')
             const {status}=req.body;
             const {id}=req.params;
             if(id && status){
-                await configDao.status(id,status)
-                message("Success",res)
+                console.log(id);
+                console.log(status)
+                message("Success",res, await configDao.status(id,status))
             }else{
                 message("PError",res)
 
@@ -40,10 +44,10 @@ module.exports={
     //修改
     update:async(req,res)=>{
         try{
-            const {location,configTitle,content,url,imageUrl,type,sortValue}=req.body;
+            const {location,configTitle,content,url,imageUrl,type,sortValue,itemId}=req.body;
             const {id}=req.params;
             if(id){
-                await configDao.update(id,{location,configTitle,content,imageUrl,type,url,sortValue});
+                await configDao.update(id,{location,configTitle,content,imageUrl,type,url,sortValue,itemId});
                 message("Success",res)
             }else{
                 message("PError",res);
@@ -71,9 +75,9 @@ module.exports={
     },
     //获取列表
     list:async(req,res)=>{
-        const {size,page,location,configTitle,status}=req.query;
+        const {size,page,location,configTitle,status,_id}=req.query;
         if(size && page){
-            message("Success",res,await configDao.list(page,size,{location,status,configTitle}));
+            message("Success",res,await configDao.list(page,size,{location,status,configTitle,_id}));
         }else{
             message("PError",res);
         }
@@ -84,6 +88,19 @@ module.exports={
             message("Success",res,await configDao.collection())
         }catch(err){
             console.log(err);
+            message("SError",res);
+        }
+    },
+    //获取详情
+    detail:async (req,res)=>{
+        try{
+            const {id}=req.query;
+            if(id){
+                message("Success",res,await configDao.detail(id));
+            }else{
+                message("PError",res);
+            }
+        }catch(err){
             message("SError",res);
         }
     }

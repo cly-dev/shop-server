@@ -14,18 +14,24 @@ module.exports = {
       //管理员Id
       adminId:{
         type:String,
-        required: true,
+        default:''
       },
       //发送时间
       createTime:{
         type:Number,
         default:Date.now(),
       },
-      //类型 1-用户发送 2-客服发送
+      //类型 1-用户发送 2-客服发送 3-系统信息
       type:{
         type:String,
-        enum:['1','2'],
+        enum:['1','2','3'],
         default:'2',
+      },
+      //0-未读 1-已读
+      status:{
+        type:String,
+        enum:['0','1'],
+        default:'0'
       },
       //内容
         content:{

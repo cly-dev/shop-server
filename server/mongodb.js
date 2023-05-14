@@ -5,6 +5,7 @@
  */
 const {mongodbConfig}=require("../config/server.config");
 const mongoose= require("mongoose");
+mongoose.set('strictQuery', true);
 const baseurl = `mongodb://${mongodbConfig.host}:${mongodbConfig.port}/${mongodbConfig.dataBase}`;
 mongoose.connect(baseurl, { useNewUrlParser: true, useUnifiedTopology: true });
 let dbHandle=mongoose.connection;

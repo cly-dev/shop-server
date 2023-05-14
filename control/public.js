@@ -56,7 +56,7 @@ exports.getEmailCode=async (req,res)=>{
 //上传文件
 exports.upload=async (req,res)=>{
   try{
-  message("Success",res,`${host}:${3000}${await upload(req)}`)
+  message("Success",res,`http://${host}:${3000}${await upload(req)}`)
   }catch(err){
     console.log(err)
     message("SError",res)

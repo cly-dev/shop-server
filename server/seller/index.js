@@ -6,12 +6,16 @@
 const Seller=require("express").Router();
 const TokenVerify =require("../../middleware/token");
 const AdminSerive=require('../../control/admin');
-const Admin=require("../../router/admin");
-const Config=require('../../router/config');
+const Admin=require("../../router/seller/admin");
+const Config=require('../../router/seller/config');
 const Product=require('../../router/seller/product');
+const Category=require("../../router/seller/category");
+const Message=require("../../router/seller/message")
 Seller.post('/login',AdminSerive.login);
 Seller.use(TokenVerify);
 Seller.use('/admin',Admin);
 Seller.use('/config',Config)
 Seller.use("/product",Product);
+Seller.use('/category',Category);
+Seller.use('/message',Message);
 module.exports=Seller

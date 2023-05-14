@@ -26,8 +26,8 @@ module.exports={
        return configModel.deleteOne({ObjectId})
     },
     //获取配置详情
-    get:(ObjectId)=>{
-       return configModel.findById({ObjectId})
+    detail:(_id)=>{
+       return configModel.findOne({_id})
     },
     //获取列表
     list:async(page,size,parmas)=>{
@@ -35,7 +35,7 @@ module.exports={
         const filters=[];
         for(let key in obj){
             filters.push({
-                [key]:obj[key]
+                [key]:key==='configTitle'?new RegExp(obj[key]): obj[key]
             })
         }
         return {
@@ -43,16 +43,63 @@ module.exports={
          total:await configModel.countDocuments({$or:filters})
         }
     },
+    find:async(page,size,location)=>{
+        const filters=[{
+            $match:{
+                location,
+                status:'0'
+            }  
+        }];
+        if(location==='product' || location==='banner'){
+            filters.push({
+                $lookup:{
+                    from:'product',
+                    //将itemId
+                    let:{localID:{$toString:'$itemId'}},
+                    pipeline:[
+                        { $match: { $expr: { $eq: [{ $toString: "$_id" }, "$$localID"] } } }
+                    ],
+                    as:'itemData'
+                }
+            },{
+                $unwind:'$itemData'
+        })
+        }else if(['category','hotCategory','activity'].includes(location)){{
+                filters.push({
+                    $lookup:{
+                        from:'category',
+                        let:{localID:{$toString:'$itemId'}},
+                        pipeline:[
+                            {
+                                $match:{
+                                    $expr:{
+                                        $eq:[{$toString:'$_id'},'$$localID']
+                                    }
+                                }
+                            }
+                        ],
+                        as:'itemData'
+                    }
+                 },{
+                $unwind:'$itemData'
+            })
+        }} 
+        filters.push({
+            $skip:(page - 1) * size
+        },{
+            $limit:size
+        })
+        return await configModel.aggregate(filters)
+    },
     //获取类型的集合
     collection:async function(){
-        console.log(this)
         return {
-            notice:await this.list(1,5,{location:'notice'}),
-            banner:await this.list(1,6,{location:'banner'}),
-            category:await this.list(1,20,{location:' category'}),
-            hotCategory:await this.list(1,4,{location:'hotCategory'}),
-            product:await this.list(1,20,{location:'product'}),
-            activity:await this.list(1,1,{location:'activity'})
+            notice:await this.find(1,5,'notice'),
+            banner:await this.find(1,6,'banner'),
+            category:await this.find(1,20,'category'),
+            hotCategory:await this.find(1,4,'hotCategory'),
+            product:await this.find(1,20,'product'),
+            activity:await this.find(1,1,'activity')
         }
     }
 }

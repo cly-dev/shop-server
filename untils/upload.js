@@ -18,12 +18,12 @@ function upload(req) {
     form.parse(req, (err, fields, files) => {
 
       if (!err) {
+
           const { path, originalFilename } = files['file'][0];
-       
-          console.log('-=----------------')
+          const name=Date.now() +originalFilename;
           //文件名
-          fs.handleReName(path,h  + '/' + originalFilename)
-          resolve(ph.join('/images',originalFilename));
+          fs.handleReName(path,h  + '/'  + name)
+          resolve(ph.join('/images', name));
       } else {
         reject(err);
       }

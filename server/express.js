@@ -7,7 +7,7 @@ const express = require('express')
 const path = require('path')
 const Seller=require('../server/seller');
 const Bugger=require("../server/bugger");
-const public = require('../router/public');
+const public = require('../server/public');
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));

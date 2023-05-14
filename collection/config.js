@@ -32,16 +32,10 @@ module.exports = {
         type: String,
         default: "",
       },
-      //类型 1-商品 2-类目
-      type:{
-          type:String,
-          enum:['1','2'],
-          default:'1'
-      }, 
       //配置的Id,类目、商品
       itemId:{
-        type:Array,
-        default:[]
+        type:String,
+        default:''
       },
       //状态 0-启用 1-禁用
       status: {

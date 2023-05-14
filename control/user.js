@@ -18,7 +18,7 @@ module.exports={
             const {accountId,password}=req.body;
             if(accountId && password ){
                 const userInfo= await userDao.getInfo(accountId);
-                if(accountId===userInfo.accountId && password===userInfo.password){
+                if(userInfo && accountId===userInfo.accountId && password===userInfo.password){
                     Object.assign(userInfo,{password:null});
                     
                     if(!TokenVerify(userInfo.token)){

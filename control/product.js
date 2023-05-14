@@ -10,9 +10,11 @@ module.exports={
     create:async (req,res)=>{
         try{
         const {adminId}=req.headers;
-        const {categoryId,productTitle,total,desc,imageUrl,mediaList,videoSrc,discountPrice,originPrice,custom,seoUrl,seoTitle,seoDesc,videoDesc,brand,color,location,freightInspection,priceEnsure,allergyTurn,notReason,freight, freightFree}=req.body;
+        const {categoryId,productTitle,total,desc,imageUrl,mediaList,videoSrc,discountPrice,originPrice,custom,seoUrl,seoTitle,seoDesc,videoDesc,brand,color,freightInspection,priceEnsure,allergyTurn,notReason,freight, freightFree,location,address}=req.body;
+        console.log(typeof custom);
+        console.log("我是自定义")
         if(categoryId && productTitle && total && imageUrl && discountPrice && seoUrl && seoTitle ){
-            message("Success",res,await productDao.create({categoryId,productTitle,total,imageUrl,desc,custom,discountPrice,originPrice,videoSrc,mediaList,operator:adminId,videoDesc,seoUrl,seoDesc,seoTitle,color,brand,location,freightInspection,priceEnsure,allergyTurn,notReason,freight,freightFree}));
+            message("Success",res,await productDao.create({categoryId,productTitle,total,imageUrl,desc,custom,discountPrice,originPrice,videoSrc,mediaList,operator:adminId,videoDesc,seoUrl,seoDesc,seoTitle,color,brand,location,freightInspection,priceEnsure,allergyTurn,notReason,freight,freightFree,address}));
         }else{
             message("PError",res)
         }
@@ -74,15 +76,18 @@ module.exports={
     //修改
     update:async (req,res)=>{
         const {id}=req.params;
-        const {categoryId,productTitle,total,desc,imageUrl,mediaList,videoSrc,discountPrice,originPrice,custom,seoUrl,seoTitle,seoDesc,videoDesc,brand,color,location,freightInspection,priceEnsure,allergyTurn,notReason,freight, freightFree}=req.body;
+        const {categoryId,productTitle,total,desc,imageUrl,mediaList,videoSrc,discountPrice,originPrice,custom,seoUrl,seoTitle,seoDesc,videoDesc,brand,color,location,freightInspection,priceEnsure,allergyTurn,notReason,freight, freightFree,address}=req.body;
+        console.log(req.body);
+        console.log("修改")
         try{
             if(id){
-                await productDao.update(id,{categoryId,productTitle,total,imageUrl,desc,mediaList,videoSrc,discountPrice,originPrice,custom, videoDesc,seoUrl,seoTitle,seoDesc,brand,color,location,freightInspection,priceEnsure,allergyTurn,notReason,freight,freightFree});
+                await productDao.update(id,{categoryId,productTitle,total,imageUrl,desc,mediaList,videoSrc,discountPrice,originPrice,custom, videoDesc,seoUrl,seoTitle,seoDesc,brand,color,location,freightInspection,priceEnsure,allergyTurn,notReason,freight,freightFree,address});
                 message("Success",res)
             }else{
                 message("PError",res);
             }
         }catch(err){
+            console.log(err)
             message("SError",res)
         }
     },

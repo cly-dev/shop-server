@@ -1,0 +1,24 @@
+<!--
+ * @Author: cly-dev 2663118046@qq.com
+ * @Date: 2023-03-29 23:16:17
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>测试</h1>
+</body>
+<script>
+     window.addEventListener("message",(data)=>{
+            console.log(data)
+            alert(data);
+            localStorage.setItem('id',data)
+        })
+</script>
+</html>

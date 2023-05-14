@@ -25,6 +25,10 @@ module.exports={
     //更新用户信息
     update:(accountId,data)=>{
         return UserModel.updateOne({accountId},{$set:data})
+    },
+    //查询用户的详细信息
+    detail:(accountId)=>{
+        return UserModel.findOne({accountId},{password:0})
     }
 
 }

@@ -15,6 +15,15 @@ module.exports = {
       seoUrl:{
         type:String,
         required:true,
+        unique:true,
+      },
+      seoTitle:{
+        type:String,
+        required:true,
+      },
+      seoDesc:{
+        type:String,
+        default:''
       },
       //商品名
       productTitle: {
@@ -38,7 +47,7 @@ module.exports = {
       },
       //商品图片列表
       mediaList:{
-        type:Array,
+        type:Object,
         default:[]
       },
       //商品视频
@@ -69,7 +78,7 @@ module.exports = {
       },
       //细节描述 key-value
       custom:{
-        type:String,
+        type:Object,
         default:[]
       },
       //创建时间
@@ -82,10 +91,20 @@ module.exports = {
         type:String,
         default:''
       },
+      //新品
+      newItem:{
+        type:Boolean,
+        default:true,
+      },
       //品牌
       brand:{
         type:String,
         default:''
+      },
+      //产地
+      address:{
+        type:Object,
+        default:['广东','揭阳']
       },
       //颜色
       color:{

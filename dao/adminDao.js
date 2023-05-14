@@ -49,6 +49,10 @@ module.exports={
     //查询的条数
     count:(params)=>{
         return adminModel.find(params).count();
+    },
+    //查询某个管理员的信息
+    detail:(adminId)=>{
+        return adminModel.findOne({adminId},{password:0})
     }
     
 }
