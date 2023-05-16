@@ -7,3 +7,7 @@ const dbHandler = require("../server/mongodb");
 const { name, collection } = require("../collection/message");
 const AdminSchema = new dbHandler.Schema(collection);
 module.exports = dbHandler.model(name, AdminSchema, name);
+AdminSchema.pre('save',function(next){
+    this.createTime=Date.now();
+    next();
+})

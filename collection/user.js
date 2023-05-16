@@ -34,13 +34,19 @@ module.exports = {
       },
       //手机号码
       phone: {
-        type: Number,
-        default: 0,
+        type: String,
+        default: '',
       },
       //状态
       status: {
         type: Number,
         default: 0,
+      },
+      //性别 0-女 1-男
+      sex:{
+        type:String,
+        enum:[''|'0' | '1'],
+        default:''
       },
       //用户token
       token: {

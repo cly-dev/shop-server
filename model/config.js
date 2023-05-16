@@ -12,6 +12,7 @@ ConfigSchema.pre('save', async function(next) {
     if (!this.sortValue) {
       const maxSortValue = await this.constructor.findOne().sort('-sortValue').exec();
       this.sortValue = (maxSortValue && maxSortValue.sortValue) ? maxSortValue.sortValue + 1 : 1;
+      this.createTime=Date.now()
     }
     next();
   });

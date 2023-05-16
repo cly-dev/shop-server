@@ -20,11 +20,10 @@ module.exports={
                 const userInfo= await userDao.getInfo(accountId);
                 if(userInfo && accountId===userInfo.accountId && password===userInfo.password){
                     Object.assign(userInfo,{password:null});
-                    
                     if(!TokenVerify(userInfo.token)){
                         const token=TokenSign({accountId:userInfo.accountId,userName:userInfo.userName,status:userInfo.status});
                         Object.assign(userInfo,{token});
-                         userDao.update(accountId,{token})
+                        await userDao.update(accountId,{token})
                     }
                     message("Success",res,userInfo);
                 }else{
