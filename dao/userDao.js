@@ -10,7 +10,7 @@ module.exports={
     //新增
     create:(data)=>{
         return new Promise((resolve,reject)=>{
-            const user=new UserModel(data);
+            const user=new UserModel({...data,joinTime:Date.now()});
             user.save().then(()=>{
                 resolve()
             }).catch((err)=>{

@@ -12,7 +12,7 @@ module.exports={
     //创建
     create: async(data)=>{
         const {seoUrl,seoTitle,seoDesc}=data;
-        await seoDao.create({seoUrl,seoTitle,seoDesc})
+        await seoDao.create({seoUrl,seoTitle,seoDesc,createTime:Date.now()})
         const category=new categoryModel(data);
         return  category.save();
     },

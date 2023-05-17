@@ -17,6 +17,11 @@ module.exports = {
         required:true,
         unique:true,
       },
+      skuId:{
+        type:String,
+        required:true,
+        default:''
+      },
       seoTitle:{
         type:String,
         required:true,
@@ -144,7 +149,7 @@ module.exports = {
        //运费
        freight:{
         type:Number,
-        default:0
+        default:1
        }
     },
   };

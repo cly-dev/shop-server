@@ -9,7 +9,7 @@ const  messageModel=require("../model/message");
 module.exports={
     //创建一个新的消息
     create:(data)=>{
-        const msg=new messageModel(data);
+        const msg=new messageModel({...data,createTime:Date.now()});
         return msg.save();
     },
     //查看用户的记录

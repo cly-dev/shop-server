@@ -14,7 +14,7 @@ module.exports={
         const {seoUrl,seoTitle,seoDesc}=data;
         console.log(data)
         await seoDao.create({seoUrl,seoTitle,seoDesc})
-        const product=new productDao(data);
+        const product=new productDao({...data,createTime:Date.now()});
         return  product.save();
     },
     //查看某个商品
@@ -61,6 +61,8 @@ module.exports={
     },
     //修改
     update:(_id,data)=>{
+        console.log(data);
+        console.log('更新')
         return productDao.updateOne({_id},{$set:data});
     },
     //修改上架状态

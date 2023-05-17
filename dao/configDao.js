@@ -9,7 +9,7 @@ const {getParams}=require("../untils/common")
 module.exports={
     //新增
     create:(data)=>{
-        const config=new configModel(data);
+        const config=new configModel({...data,createTime:Date.now()});
         return config.save();
     },
     //改变状态
@@ -22,8 +22,8 @@ module.exports={
         return configModel.updateOne({_id},{$set:{...obj}})
     },
     //删除
-    delete:(ObjectId)=>{
-       return configModel.deleteOne({ObjectId})
+    delete:(_id)=>{
+       return configModel.deleteOne({_id})
     },
     //获取配置详情
     detail:(_id)=>{
